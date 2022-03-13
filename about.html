@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/style.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Document</title>
+</head>
+  <body>
+       <header x-data="{ isOpen: false }" class="bg-white dark:bg-gray-800">
+      <nav class="px-6 py-4 shadow">
+          <div class="lg:items-center lg:justify-between lg:flex">
+              <div class="flex items-center justify-between">
+                  <a href="index.html">
+                      <img src="assets/somastronglogo.png" href="index.html" class="h-20" alt="somastronglogo">
+                  </a>
+                            <!-- Mobile menu button -->
+                  <div @click="isOpen = !isOpen" class="lg:hidden">
+                      <button
+                      type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="Toggle menu">
+                      <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                      <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                      </svg>
+                      </button>
+                  </div>
+              </div>
+
+              <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+              <div :class="isOpen ? 'show' : 'hidden'" class="flex flex-col mt-2 -mx-2 lg:mt-0 lg:flex-row lg:block">
+                  <a href="index.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2">Home</a>
+                  <a href="about.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2">About</a>
+                  <a href="contact.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2">Contact</a>
+              </div>
+          </div>
+      </nav>
+    </header>
+    <section class="bg-white dark:bg-gray-800">
+        <div class="container px-6 py-8 mx-auto">
+            <div class="items-center lg:flex">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100">Who I am</h2>
+                    <p class="mt-4 text-gray-500 dark:text-gray-400 lg:max-w-md">
+                        Hi I am jane , software engineer <a class="font-bold text-blue-600 dark:text-blue-400" href="#">@BakaTeam</a> , Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum in sed non alias, fugiat, commodi nemo ut fugit corrupti dolorem sequi ex veniam consequuntur id, maiores beatae ipsa omnis aliquam?
+                    </p>
+                    <div class="flex items-center mt-6 -mx-2">
+                        <a class="mx-2" href="#" aria-label="Facebook">
+                            <svg class="w-5 h-5 text-gray-700 fill-current dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M426.8 64H85.2C73.5 64 64 73.5 64 85.2v341.6c0 11.7 9.5 21.2 21.2 21.2H256V296h-45.9v-56H256v-41.4c0-49.6 34.4-76.6 78.7-76.6 21.2 0 44 1.6 49.3 2.3v51.8h-35.3c-24.1 0-28.7 11.4-28.7 28.2V240h57.4l-7.5 56H320v152h106.8c11.7 0 21.2-9.5 21.2-21.2V85.2c0-11.7-9.5-21.2-21.2-21.2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-8 lg:mt-0 lg:w-1/2">
+                    <div class="flex items-center justify-center lg:justify-end">
+                        <div class="max-w-lg">
+                            <img class="object-cover object-center w-full h-64 rounded-md shadow" src="https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      </body>
+      <footer class="bg-gray-300">
+        <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+          <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+            <div class="px-5 py-2">
+              <a href="index.html" class="text-base text-gray-500 hover:text-gray-900"> Home </a>
+            </div>
+            <div class="px-5 py-2">
+              <a href="about.html" class="text-base text-gray-500 hover:text-gray-900"> About </a>
+            </div>
+
+            <div class="px-5 py-2">
+              <a href="contact.html" class="text-base text-gray-500 hover:text-gray-900"> Contact </a>
+            </div>
+           </nav>
+          <p class="mt-8 text-center text-base text-gray-400">&copy; 2022 F-Web-Dev, Inc. All rights reserved.</p>
+        </div>
+      </footer>
+</html>

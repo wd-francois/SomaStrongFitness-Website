@@ -1,0 +1,16 @@
+{
+  "name": "somastrongfitness-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "npx tailwindcss -i ./src/styles.css -o ./public/style.css --watch"
+     },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alpinejs": "^3.9.1",
+    "esbuild": "^0.14.25"
+  }
+}
