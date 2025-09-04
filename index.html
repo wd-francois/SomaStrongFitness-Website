@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +7,11 @@
     <link rel="stylesheet" href="public/style.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>SomaStrongFitness</title>
+    <meta name="google-site-verification" content="sMYyEFxyRKi6Vf2Sx8qEHDlREWzdux4LviZXn-XE1v0" />
 </head>
 <body>
-  <header x-data="{ isOpen: false }" class="bg-white dark:bg-gray-800">
-      <nav class="px-6 py-4 shadow">
+  <header x-data="{ isOpen: false }" class="bg-transparent dark:bg-transparent">
+      <nav class="px-6 py-4">
           <div class="lg:items-center lg:justify-between lg:flex">
               <div class="flex items-center justify-between">
                   <a href="index.html">
@@ -35,55 +35,61 @@
           </div>
       </nav>
   </header>
-  <!-- Hero Section -->
-  <section class="flex flex-col min-h-screen bg-slate-800 text-white bg-center bg-cover bg-blend-overlay bg-fixed bg-black/30" style="background-image: url('https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')">
-      <!-- Hero Section Content -->
-      <div class="flex-1 flex items-center">
-          <div class="text-center mx-auto">
-              <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-                  <span class="block xl:inline">SomaStrong Fitness</span>
-              </h1>
-              <p class="mt-3 max-w-md mx-auto text-lg text-gray-200 sm:text-xl md:mt-5 md:max-w-3xl">Building strong, healthy women for a lifelong healthy lifestyle.</p>
-              <a href="contact.html">
-                  <button class="bg-transparent hover:bg-blue-600 text-white font-semibold hover:text-white p-4 border hover:border-transparent rounded inline-block mt-5 cursor-pointer" href="contact.html">Get Started</button>
-              </a>
-          </div>
+  <section class="flex flex-col h-screen bg-slate-800 text-white bg-center bg-cover bg-blend-overlay bg-fixed bg-black/30 md:bg-none md:bg-slate-800"
+  style="background-image: url('https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80'); background-size: cover;">
+
+  <!-- Hero Section Content -->
+  <div class="flex-1 flex items-center justify-center">
+      <div class="text-center">
+          <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
+              <span class="block xl:inline">SomaStrong Fitness</span>
+          </h1>
+          <p class="mt-3 max-w-md mx-auto text-lg text-gray-200 sm:text-xl md:mt-5 md:max-w-3xl">Building strong,
+              healthy women for a lifelong healthy lifestyle.</p>
+          <a href="contact.html">
+              <button
+                  class="bg-transparent hover:bg-blue-600 text-white font-semibold hover:text-white p-4 border hover:border-transparent rounded inline-block mt-5 cursor-pointer"
+                  href="contact.html">Get Started</button>
+          </a>
       </div>
-  </section>
+  </div>
+</section>
     <!-- Servcies Section -->
         <div class="bg-white sm:py-12">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl sm:text-center">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Services</h2>
-            <p class="text-lg leading-8 text-gray-600">A private studio dedicated to women's health.</p>
-          </div>
+        </div>
           <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none">
             <li class="flex flex-col gap-6 xl:flex-row">
               <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="https://media.istockphoto.com/id/852401728/photo/adult-woman-exercising-at-the-gym-with-a-personal-trainer.jpg?s=2048x2048&w=is&k=20&c=tVWOjHNm8DDYmXeuoBlALtwiOMDiXZ2ZH4tB0iIBlBQ=" alt="">
               <div class="flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">Personal Training/Small group Training </h3>
-                <p class="mt-6 text-base leading-7 text-gray-600">Quia illum aut in beatae. Possimus dolores aliquid accusantium aut in ut non assumenda. Enim iusto molestias aut deleniti eos aliquid magnam molestiae. At et non possimus ab. Magni labore molestiae nulla qui.</p>
+                <p class="mt-6 text-base leading-7 text-gray-600">Customised one on one, or small group training focusing on building strength through progressive load.  Circuit training focusing on strength, conditioning and cardio</p>
               </div>
             </li>
             <li class="flex flex-col gap-6 xl:flex-row">
                 <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="https://media.istockphoto.com/id/1069264934/photo/group-of-athletic-people-exercising-in-a-health-club.jpg?s=2048x2048&w=is&k=20&c=O4OY4DMwotOYQl9v04C6UyoQ3FnFV3eNB7P1oESpPtg=" alt="">
                 <div class="flex-auto">
-                  <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">Circuit training</h3>
-                  <p class="mt-6 text-base leading-7 text-gray-600">Quia illum aut in beatae. Possimus dolores aliquid accusantium aut in ut non assumenda. Enim iusto molestias aut deleniti eos aliquid magnam molestiae. At et non possimus ab. Magni labore molestiae nulla qui.</p>
+                  <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">Rehab</h3>
+                  <p class="mt-6 text-base leading-7 text-gray-600">Certified in Functional Training/Rehabilitation(Fitness Australia); Dealing with knee injuries and conditions;
+                    *Dealing with back pain, Dealing with shoulder injuries, 
+                    
+                    *Dealing with physical conditions and exercise disabilities</p>
                 </div>
               </li>
               <li class="flex flex-col gap-6 xl:flex-row">
                 <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="https://media.istockphoto.com/id/1132778836/photo/keeping-her-muscles-in-shape-for-labour.jpg?s=2048x2048&w=is&k=20&c=X1pVyLN8xcYuMrJRNK0bWcmGBYYIpML8Bu5BwuUOPiM=" alt="">
                 <div class="flex-auto">
                   <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">Pre and Post Natal</h3>
-                  <p class="mt-6 text-base leading-7 text-gray-600">Quia illum aut in beatae. Possimus dolores aliquid accusantium aut in ut non assumenda. Enim iusto molestias aut deleniti eos aliquid magnam molestiae. At et non possimus ab. Magni labore molestiae nulla qui.</p>
+                  <p class="mt-6 text-base leading-7 text-gray-600">Providing safe and effective training programs to suit mothers to be before , during and after pregnancy.</p>
                 </div>
               </li>
               <li class="flex flex-col gap-6 xl:flex-row">
                 <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="https://media.istockphoto.com/id/1468860049/photo/fitness-woman-eating-a-healthy-poke-bowl-in-the-kitchen-at-home.jpg?s=2048x2048&w=is&k=20&c=gHik1p_kHL3PdZzhAE0sD0_JGfhN_aunlH3orhmlgu8=" alt="">
                 <div class="flex-auto">
                   <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">Nutrition Coaching</h3>
-                <p class="mt-6 text-base leading-7 text-gray-600">Quia illum aut in beatae. Possimus dolores aliquid accusantium aut in ut non assumenda. Enim iusto molestias aut deleniti eos aliquid magnam molestiae. At et non possimus ab. Magni labore molestiae nulla qui.</p>
+                <p class="mt-6 text-base leading-7 text-gray-600">Certified Precision Nutrition Coach. This includes diet analysis;  introducing healthy eating habits; measurements; ongoing monitoring.</p>
                 </div>
               </li>  
             
@@ -92,7 +98,7 @@
       </div>
 <!-- Slider -->
 <main class="w-full py-2 grid place-content-center">
-  <h1 class="m-4 font-bold text-2xl text-center mt-4">A private studio dedicated to women's health.</h1>
+  <h1 class="m-4 font-bold text-3xl text-center mt-4">A private studio dedicated to women's health.</h1>
   <div x-data="imageSlider" class="rounded-md max-w-4xl mx-auto relative p-2 sm:p-4 overflow-hidden">
       <div class="rounded-full text-white absolute top-5 right-5 text-sm px-2 text-center z-10">
           <span x-text="currentIndex"></span>/<span x-text="images.length"></span>
@@ -116,7 +122,6 @@
       </div>
   </div>
 </main>
-
 
     <footer>
         <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
