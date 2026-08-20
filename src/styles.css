@@ -208,15 +208,12 @@
   }
 
   [data-nav-menu] {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  [data-nav-menu] > * {
+    max-height: 0;
     overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   [data-nav-menu][data-open="true"] {
-    grid-template-rows: 1fr;
+    max-height: 28rem;
   }
 
   .skip-link {
