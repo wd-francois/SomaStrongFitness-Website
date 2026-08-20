@@ -1,184 +1,351 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/style.css">
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>SomaStrongFitness</title>
-    <meta name="google-site-verification" content="sMYyEFxyRKi6Vf2Sx8qEHDlREWzdux4LviZXn-XE1v0" />
-</head>
-<body>
-  <header x-data="{ isOpen: false }" class="bg-transparent dark:bg-transparent">
-      <nav class="px-6 py-4">
-          <div class="lg:items-center lg:justify-between lg:flex">
-              <div class="flex items-center justify-between">
-                  <a href="index.html">
-                      <img src="./assets/somastronglogo.png" class="h-28" href="index.html" alt="somastronglogo">
-                  </a>
-                  <!-- Mobile menu button -->
-                  <div @click="isOpen = !isOpen" class="lg:hidden">
-                      <button type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="Toggle menu">
-                          <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                              <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-                          </svg>
-                      </button>
-                  </div>
-              </div>
-              <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-              <div :class="isOpen ? 'show' : 'hidden'" class="flex flex-col mt-2 -mx-2 lg:mt-0 lg:flex-row lg:block">
-                  <a href="index.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2">Home</a>
-                  <a href="about.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2">About</a>
-                  <a href="contact.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2">Contact</a>
-              </div>
-          </div>
-      </nav>
-  </header>
-  <section class="flex flex-col h-screen bg-slate-800 text-white bg-center bg-cover bg-blend-overlay bg-fixed bg-black/30 md:bg-none md:bg-slate-800"
-  style="background-image: url('https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80'); background-size: cover;">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SomaStrong Fitness | Private Personal Training Studio for Women, Pascoe Vale</title>
+  <meta name="description" content="Private, fully-equipped home studio in Pascoe Vale, Melbourne. One-on-one and small-group personal training, pre/postnatal strength, rehab and nutrition coaching for women, led by certified trainer Kathy." />
+  <link rel="canonical" href="https://www.somastrongfitness.com.au/" />
 
-  <!-- Hero Section Content -->
-  <div class="flex-1 flex items-center justify-center">
-      <div class="text-center">
-          <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-              <span class="block xl:inline">SomaStrong Fitness</span>
-          </h1>
-          <p class="mt-3 max-w-md mx-auto text-lg text-gray-200 sm:text-xl md:mt-5 md:max-w-3xl">Building strong,
-              healthy women for a lifelong healthy lifestyle.</p>
-          <a href="contact.html">
-              <button
-                  class="bg-transparent hover:bg-blue-600 text-white font-semibold hover:text-white p-4 border hover:border-transparent rounded inline-block mt-5 cursor-pointer"
-                  href="contact.html">Get Started</button>
-          </a>
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SomaStrong Fitness" />
+  <meta property="og:title" content="SomaStrong Fitness | Private Personal Training Studio for Women" />
+  <meta property="og:description" content="Building strong, healthy women for a lifelong healthy lifestyle. Private home studio in Pascoe Vale, Melbourne." />
+  <meta property="og:image" content="https://www.somastrongfitness.com.au/assets/hero1.jpg" />
+  <meta property="og:url" content="https://www.somastrongfitness.com.au/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="theme-color" content="#fdfbf8" />
+  <link rel="icon" href="public/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="public/icons/apple-touch-icon.png" />
+  <meta name="google-site-verification" content="sMYyEFxyRKi6Vf2Sx8qEHDlREWzdux4LviZXn-XE1v0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="public/style.css" />
+  <script src="script.js" defer></script>
+
+  <!-- Structured data: local business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ExerciseGym",
+    "name": "SomaStrong Fitness",
+    "description": "Private personal training studio for women offering one-on-one and small-group training, rehab, pre/postnatal strength training and nutrition coaching.",
+    "image": "https://www.somastrongfitness.com.au/assets/hero1.jpg",
+    "url": "https://www.somastrongfitness.com.au/",
+    "telephone": "+61438863750",
+    "email": "somastrong29@gmail.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Graham Street",
+      "addressLocality": "Pascoe Vale",
+      "addressRegion": "VIC",
+      "postalCode": "3044",
+      "addressCountry": "AU"
+    },
+    "areaServed": "Melbourne, VIC",
+    "sameAs": ["https://www.facebook.com/kathyg29"]
+  }
+  </script>
+</head>
+<body class="bg-cream-50 font-sans text-ink-900 antialiased">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header data-header class="fixed inset-x-0 top-0 z-50">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
+      <a href="index.html" class="shrink-0" aria-label="SomaStrong Fitness home">
+        <img src="assets/somastronglogo.png" alt="SomaStrong Fitness" class="h-14 w-auto md:h-16" width="800" height="321" />
+      </a>
+
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
+        <a href="index.html" class="nav-link text-sm font-medium" aria-current="page">Home</a>
+        <a href="about.html" class="nav-link text-sm font-medium">About</a>
+        <a href="contact.html" class="nav-link text-sm font-medium">Contact</a>
+        <a href="contact.html" class="btn btn-primary text-sm">Book a session</a>
+      </nav>
+
+      <button type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" class="flex h-11 w-11 items-center justify-center rounded-full text-ink-900 lg:hidden">
+        <span class="sr-only">Toggle menu</span>
+        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current" aria-hidden="true">
+          <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" data-nav-menu data-open="false" class="bg-cream-50 shadow-lg lg:hidden">
+      <div class="flex flex-col gap-1 border-t border-ink-900/5 px-6 pb-6 pt-2">
+        <a href="index.html" class="rounded-lg px-3 py-3 text-sm font-medium hover:bg-cream-200" aria-current="page">Home</a>
+        <a href="about.html" class="rounded-lg px-3 py-3 text-sm font-medium hover:bg-cream-200">About</a>
+        <a href="contact.html" class="rounded-lg px-3 py-3 text-sm font-medium hover:bg-cream-200">Contact</a>
+        <a href="contact.html" class="btn btn-primary mt-2 justify-center text-sm">Book a session</a>
       </div>
-  </div>
-</section>
-    <!-- Servcies Section -->
-        <div class="bg-white sm:py-12">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl sm:text-center">
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Services</h2>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="relative flex min-h-[92svh] items-end overflow-hidden bg-ink-950 text-cream-50" aria-labelledby="hero-heading">
+      <picture>
+        <source media="(max-width: 640px)" srcset="assets/hero1-mobile.webp" type="image/webp" />
+        <source media="(max-width: 640px)" srcset="assets/hero1-mobile.jpg" />
+        <source srcset="assets/hero1.webp" type="image/webp" />
+        <img
+          src="assets/hero1.jpg"
+          alt="A woman racking a barbell on her shoulders mid-squat, back muscles engaged, in the SomaStrong home studio"
+          class="absolute inset-0 -z-10 h-full w-full object-cover object-[65%_center] brightness-125 contrast-105"
+          width="1920"
+          height="1281"
+          fetchpriority="high"
+        />
+      </picture>
+      <div class="absolute inset-0 -z-10 bg-linear-to-t from-ink-950/95 from-0% via-ink-950/25 via-40% to-transparent to-75%"></div>
+
+      <div class="mx-auto w-full max-w-7xl px-6 pb-20 pt-40 lg:px-8 lg:pb-28">
+        <p class="eyebrow text-cream-100">Private studio · Pascoe Vale, Melbourne</p>
+        <h1 id="hero-heading" class="mt-4 max-w-3xl text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-6xl">
+          Building strong, healthy women for a lifelong healthy lifestyle.
+        </h1>
+        <p class="mt-6 max-w-xl text-lg text-cream-200">
+          One-on-one and small-group personal training in a fully-equipped, women-only home studio — led by a certified trainer with over ten years of experience.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="contact.html" class="btn btn-primary">Book a free consultation</a>
+          <a href="#gallery" class="btn btn-ghost">See the studio</a>
         </div>
-          <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none">
-            <li class="flex flex-col gap-6 xl:flex-row">
-              <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="https://media.istockphoto.com/id/852401728/photo/adult-woman-exercising-at-the-gym-with-a-personal-trainer.jpg?s=2048x2048&w=is&k=20&c=tVWOjHNm8DDYmXeuoBlALtwiOMDiXZ2ZH4tB0iIBlBQ=" alt="">
-              <div class="flex-auto">
-                <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">Personal Training/Small group Training </h3>
-                <p class="mt-6 text-base leading-7 text-gray-600">Customised one on one, or small group training focusing on building strength through progressive load.  Circuit training focusing on strength, conditioning and cardio</p>
-              </div>
-            </li>
-            <li class="flex flex-col gap-6 xl:flex-row">
-                <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="https://media.istockphoto.com/id/1069264934/photo/group-of-athletic-people-exercising-in-a-health-club.jpg?s=2048x2048&w=is&k=20&c=O4OY4DMwotOYQl9v04C6UyoQ3FnFV3eNB7P1oESpPtg=" alt="">
-                <div class="flex-auto">
-                  <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">Rehab</h3>
-                  <p class="mt-6 text-base leading-7 text-gray-600">Certified in Functional Training/Rehabilitation(Fitness Australia); Dealing with knee injuries and conditions;
-                    *Dealing with back pain, Dealing with shoulder injuries, 
-                    
-                    *Dealing with physical conditions and exercise disabilities</p>
-                </div>
-              </li>
-              <li class="flex flex-col gap-6 xl:flex-row">
-                <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="https://media.istockphoto.com/id/1132778836/photo/keeping-her-muscles-in-shape-for-labour.jpg?s=2048x2048&w=is&k=20&c=X1pVyLN8xcYuMrJRNK0bWcmGBYYIpML8Bu5BwuUOPiM=" alt="">
-                <div class="flex-auto">
-                  <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">Pre and Post Natal</h3>
-                  <p class="mt-6 text-base leading-7 text-gray-600">Providing safe and effective training programs to suit mothers to be before , during and after pregnancy.</p>
-                </div>
-              </li>
-              <li class="flex flex-col gap-6 xl:flex-row">
-                <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="https://media.istockphoto.com/id/1468860049/photo/fitness-woman-eating-a-healthy-poke-bowl-in-the-kitchen-at-home.jpg?s=2048x2048&w=is&k=20&c=gHik1p_kHL3PdZzhAE0sD0_JGfhN_aunlH3orhmlgu8=" alt="">
-                <div class="flex-auto">
-                  <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-900">Nutrition Coaching</h3>
-                <p class="mt-6 text-base leading-7 text-gray-600">Certified Precision Nutrition Coach. This includes diet analysis;  introducing healthy eating habits; measurements; ongoing monitoring.</p>
-                </div>
-              </li>  
-            
+      </div>
+    </section>
+
+    <!-- Quick facts -->
+    <section class="border-b border-ink-900/5 bg-cream-100" aria-label="Studio highlights">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-6 py-10 sm:grid-cols-4 lg:px-8">
+        <div class="reveal text-center sm:text-left">
+          <p class="font-display text-3xl font-semibold text-clay-600">10+</p>
+          <p class="mt-1 text-sm text-ink-700">Years of coaching experience</p>
+        </div>
+        <div class="reveal text-center sm:text-left">
+          <p class="font-display text-3xl font-semibold text-clay-600">4–6</p>
+          <p class="mt-1 text-sm text-ink-700">Max group size, for real attention</p>
+        </div>
+        <div class="reveal text-center sm:text-left">
+          <p class="font-display text-3xl font-semibold text-clay-600">1:1</p>
+          <p class="mt-1 text-sm text-ink-700">Private, women-only studio</p>
+        </div>
+        <div class="reveal text-center sm:text-left">
+          <p class="font-display text-3xl font-semibold text-clay-600">100%</p>
+          <p class="mt-1 text-sm text-ink-700">Programs tailored to you</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="mx-auto max-w-7xl px-6 py-24 lg:px-8" aria-labelledby="services-heading">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="eyebrow mx-auto justify-center">What I offer</p>
+        <h2 id="services-heading" class="mt-4 text-3xl font-semibold sm:text-4xl">Services built around your goals</h2>
+      </div>
+
+      <ul role="list" class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2 lg:max-w-none lg:grid-cols-4">
+        <li class="reveal card-surface flex flex-col overflow-hidden">
+          <div class="flex aspect-4/3 w-full items-center justify-center bg-cream-100">
+            <svg class="h-14 w-14 text-clay-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 9v6M7 7v10M17 7v10M19 9v6M7 12h10" />
+            </svg>
+          </div>
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="text-lg font-semibold">Personal &amp; Small-Group Training</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-ink-700">
+              Customised one-on-one or small-group training focused on building strength through progressive load, plus circuit training for strength, conditioning and cardio.
+            </p>
+          </div>
+        </li>
+
+        <li class="reveal card-surface flex flex-col overflow-hidden">
+          <div class="flex aspect-4/3 w-full items-center justify-center bg-cream-100">
+            <svg class="h-14 w-14 text-clay-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="text-lg font-semibold">Rehab</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-ink-700">
+              Certified in Functional Training/Rehabilitation (Fitness Australia) — knee, back and shoulder injuries, plus training around physical conditions and exercise disabilities.
+            </p>
+          </div>
+        </li>
+
+        <li class="reveal card-surface flex flex-col overflow-hidden">
+          <div class="flex aspect-4/3 w-full items-center justify-center bg-cream-100">
+            <svg class="h-14 w-14 text-clay-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="text-lg font-semibold">Pre &amp; Post Natal</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-ink-700">
+              Safe, effective training programs to suit mothers-to-be before, during and after pregnancy.
+            </p>
+          </div>
+        </li>
+
+        <li class="reveal card-surface flex flex-col overflow-hidden">
+          <div class="flex aspect-4/3 w-full items-center justify-center bg-cream-100">
+            <svg class="h-14 w-14 text-clay-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21V9M12 9c0 0-6 0-6-4.5 0 0 6 0 6 4.5zM12 9c0 0 6 0 6-4.5 0 0-6 0-6 4.5z" />
+            </svg>
+          </div>
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="text-lg font-semibold">Nutrition Coaching</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-ink-700">
+              Certified Precision Nutrition Coach — diet analysis, sustainable healthy habits, measurements and ongoing monitoring.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="bg-ink-950 py-24 text-cream-50" aria-labelledby="gallery-heading">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p class="eyebrow text-clay-500">Take a look inside</p>
+            <h2 id="gallery-heading" class="mt-4 text-3xl font-semibold sm:text-4xl">A private studio dedicated to women's health</h2>
+          </div>
+          <p class="max-w-sm text-sm text-cream-300">
+            A fully-equipped home gym — free weights, cardio and functional training kit — with no crowds, no waiting, and no one watching but you.
+          </p>
+        </div>
+
+        <div class="relative mt-12" data-gallery>
+          <div
+            data-gallery-track
+            class="gallery-track flex snap-x gap-4 overflow-x-auto pb-4"
+            role="group"
+            aria-roledescription="carousel"
+            aria-label="Studio photos"
+          >
+            <div class="w-[80%] shrink-0 sm:w-[45%] lg:w-[30%]">
+              <img src="assets/Studio/2.jpg" srcset="assets/Studio/2.webp" alt="Studio training floor with free weights" class="aspect-4/5 w-full rounded-2xl object-cover" loading="lazy" decoding="async" width="828" height="1035" />
+            </div>
+            <div class="w-[80%] shrink-0 sm:w-[45%] lg:w-[30%]">
+              <img src="assets/Studio/3.jpg" srcset="assets/Studio/3.webp" alt="Dumbbell rack and bench setup" class="aspect-4/5 w-full rounded-2xl object-cover" loading="lazy" decoding="async" width="720" height="900" />
+            </div>
+            <div class="w-[80%] shrink-0 sm:w-[45%] lg:w-[30%]">
+              <img src="assets/Studio/4.jpg" srcset="assets/Studio/4.webp" alt="Functional training area of the studio" class="aspect-4/5 w-full rounded-2xl object-cover" loading="lazy" decoding="async" width="960" height="1200" />
+            </div>
+            <div class="w-[80%] shrink-0 sm:w-[45%] lg:w-[30%]">
+              <img src="assets/Studio/6.jpg" srcset="assets/Studio/6.webp" alt="Cardio equipment in the SomaStrong studio" class="aspect-4/5 w-full rounded-2xl object-cover" loading="lazy" decoding="async" width="960" height="1200" />
+            </div>
+            <div class="w-[80%] shrink-0 sm:w-[45%] lg:w-[30%]">
+              <img src="assets/Studio/8.jpg" srcset="assets/Studio/8.webp" alt="Strength training rack in the studio" class="aspect-4/5 w-full rounded-2xl object-cover" loading="lazy" decoding="async" width="720" height="900" />
+            </div>
+            <div class="w-[80%] shrink-0 sm:w-[45%] lg:w-[30%]">
+              <img src="assets/Studio/10.jpg" srcset="assets/Studio/10.webp" alt="Wide view of the private training studio" class="aspect-4/5 w-full rounded-2xl object-cover" loading="lazy" decoding="async" width="960" height="1200" />
+            </div>
+            <div class="w-[80%] shrink-0 sm:w-[45%] lg:w-[30%]">
+              <img src="assets/Studio/12.jpg" srcset="assets/Studio/12.webp" alt="Equipment corner of the studio" class="aspect-4/5 w-full rounded-2xl object-cover" loading="lazy" decoding="async" width="720" height="900" />
+            </div>
+            <div class="w-[80%] shrink-0 sm:w-[45%] lg:w-[30%]">
+              <img src="assets/Studio/14.jpg" srcset="assets/Studio/14.webp" alt="Additional view of the training space" class="aspect-4/5 w-full rounded-2xl object-cover" loading="lazy" decoding="async" width="720" height="900" />
+            </div>
+            <div class="w-[80%] shrink-0 sm:w-[45%] lg:w-[30%]">
+              <img src="assets/Studio/16.jpg" srcset="assets/Studio/16.webp" alt="Final view of the SomaStrong home studio" class="aspect-4/5 w-full rounded-2xl object-cover" loading="lazy" decoding="async" width="720" height="900" />
+            </div>
+          </div>
+
+          <div class="mt-6 flex items-center justify-between">
+            <span data-gallery-status class="text-sm text-cream-300" aria-live="polite">1 / 9</span>
+            <div class="flex gap-3">
+              <button type="button" data-gallery-prev class="flex h-11 w-11 items-center justify-center rounded-full border border-cream-50/20 text-cream-50 transition hover:bg-cream-50/10 disabled:opacity-30">
+                <span class="sr-only">Previous photo</span>
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" /></svg>
+              </button>
+              <button type="button" data-gallery-next class="flex h-11 w-11 items-center justify-center rounded-full border border-cream-50/20 text-cream-50 transition hover:bg-cream-50/10 disabled:opacity-30">
+                <span class="sr-only">Next photo</span>
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About teaser -->
+    <section class="mx-auto max-w-7xl px-6 py-24 lg:px-8" aria-labelledby="about-teaser-heading">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div class="reveal order-2 lg:order-1">
+          <p class="eyebrow">Meet your trainer</p>
+          <h2 id="about-teaser-heading" class="mt-4 text-3xl font-semibold sm:text-4xl">Hi, I'm Kathy.</h2>
+          <p class="mt-6 text-lg leading-relaxed text-ink-700">
+            A certified personal trainer with over ten years of experience, I've helped women of all ages, backgrounds and fitness levels discover their own strength — physically and mentally. My approach is supportive, practical and results-focused.
+          </p>
+          <a href="about.html" class="btn btn-ghost mt-8">Read my full story</a>
+        </div>
+        <div class="reveal order-1 lg:order-2">
+          <img
+            src="assets/Studio/11.jpg"
+            srcset="assets/Studio/11.webp"
+            alt="SomaStrong training studio, ready for a session"
+            class="aspect-4/3 w-full rounded-2xl object-cover shadow-(--shadow-soft)"
+            loading="lazy"
+            decoding="async"
+            width="720"
+            height="540"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-clay-600 py-20 text-cream-50" aria-labelledby="cta-heading">
+      <div class="mx-auto max-w-4xl px-6 text-center lg:px-8">
+        <h2 id="cta-heading" class="text-3xl font-semibold sm:text-4xl">Ready to get stronger?</h2>
+        <p class="mx-auto mt-4 max-w-xl text-cream-100">
+          Book a free consultation and let's build a program around your goals, your body and your pace.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="contact.html" class="btn bg-cream-50 text-ink-900 hover:bg-white">Book a free consultation</a>
+          <a href="tel:+61438863750" class="btn btn-ghost">Call 0438 863 750</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-cream-50 text-ink-700">
+    <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div class="grid gap-10 sm:grid-cols-3">
+        <div>
+          <img src="assets/somastronglogo.png" alt="SomaStrong Fitness" class="h-10 w-auto" width="800" height="321" />
+          <p class="mt-4 max-w-xs text-sm leading-relaxed">Private personal training studio for women in Pascoe Vale, Melbourne.</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h3 class="text-sm font-semibold text-ink-900">Menu</h3>
+          <ul role="list" class="mt-4 space-y-2 text-sm">
+            <li><a class="hover:text-ink-900" href="index.html">Home</a></li>
+            <li><a class="hover:text-ink-900" href="about.html">About</a></li>
+            <li><a class="hover:text-ink-900" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h3 class="text-sm font-semibold text-ink-900">Get in touch</h3>
+          <ul role="list" class="mt-4 space-y-2 text-sm">
+            <li><a class="hover:text-ink-900" href="tel:+61438863750">0438 863 750</a></li>
+            <li><a class="hover:text-ink-900" href="mailto:somastrong29@gmail.com">somastrong29@gmail.com</a></li>
+            <li>Graham Street, Pascoe Vale, VIC 3044</li>
+            <li><a class="hover:text-ink-900" href="https://www.facebook.com/kathyg29" target="_blank" rel="noopener noreferrer">Facebook</a></li>
           </ul>
         </div>
       </div>
-<!-- Slider -->
-<main class="w-full py-2 grid place-content-center">
-  <h1 class="m-4 font-bold text-3xl text-center mt-4">A private studio dedicated to women's health.</h1>
-  <div x-data="imageSlider" class="rounded-md max-w-4xl mx-auto relative p-2 sm:p-4 overflow-hidden">
-      <div class="rounded-full text-white absolute top-5 right-5 text-sm px-2 text-center z-10">
-          <span x-text="currentIndex"></span>/<span x-text="images.length"></span>
-      </div>
-      <button @click="previous()" class="absolute left-5 top-1/2 -translate-y-1/2 bg-gray-100 rounded-full w-11 h-11 flex justify-center items-center shadow-md z-10">
-          <svg class="w-8 h-8 font-bold text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
-          </svg>
-      </button>
-      <button @click="forward()" class="absolute right-5 top-1/2 -translate-y-1/2 bg-gray-100 rounded-full w-11 h-11 flex justify-center items-center shadow-md z-10">
-          <svg class="w-8 h-8 font-bold text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
-          </svg>
-      </button>
-      <div class="relative h-96" style="width: 40rem;">
-          <template x-for="(image, index) in images">
-              <div x-show="currentIndex == index + 1" x-transition:enter="transition transform duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute top-0 w-full h-full">
-                  <img :src="image" alt="image" class="object-cover w-full h-full">
-              </div>
-          </template>
-      </div>
-  </div>
-</main>
 
-    <footer>
-        <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-          <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
-            <div class="px-5 py-2">
-              <a href="index.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2"> Home </a>
-            </div>
-
-            <div class="px-5 py-2">
-              <a href="about.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2"> About </a>
-            </div>
-
-            <div class="px-5 py-2">
-              <a href="contact.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2"> Contact </a>
-            </div>
-           </nav>
-
-          <p class="mt-8 text-center text-base text-gray-400">&copy; 2022 F-Web-Dev, Inc. All rights reserved.</p>
-        </div>
-      </footer>
-
-<script>
- document.addEventListener('alpine:init', () => {
-     Alpine.data('imageSlider', () => ({
-         currentIndex: 1,
-         images: [
-             'assets/studio/2.jpg',
-             'assets/studio/4.jpg',
-             'assets/studio/5.jpg',
-             'assets/studio/6.jpg',
-             'assets/studio/7.jpg',
-             'assets/studio/8.jpg',
-             'assets/studio/9.jpg',
-             'assets/studio/10.jpg',
-             'assets/studio/11.jpg',
-             'assets/studio/12.jpg',
-             'assets/studio/13.jpg',
-             'assets/studio/14.jpg',
-             'assets/studio/15.jpg',
-             'assets/studio/16.jpg',
-             'assets/studio/172.jpg',
-             'assets/studio/2.jpg',
-     
-
-         ],
-         previous() {
-             if (this.currentIndex > 1) {
-                 this.currentIndex = this.currentIndex - 1;
-             }
-         },
-         forward() {
-             if (this.currentIndex < this.images.length) {
-                 this.currentIndex = this.currentIndex + 1;
-             }
-         }
-     }))
- })
-</script>
+      <p class="mt-12 border-t border-ink-900/10 pt-8 text-center text-xs text-ink-500">&copy; 2026 SomaStrong Fitness. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

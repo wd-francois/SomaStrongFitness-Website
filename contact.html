@@ -1,113 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/style.css">
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | SomaStrong Fitness</title>
+  <meta name="description" content="Get in touch with SomaStrong Fitness in Pascoe Vale, Melbourne. Book a free consultation for personal training, rehab, pre/postnatal strength or nutrition coaching." />
+  <link rel="canonical" href="https://www.somastrongfitness.com.au/contact.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SomaStrong Fitness" />
+  <meta property="og:title" content="Contact | SomaStrong Fitness" />
+  <meta property="og:description" content="Book a free consultation with SomaStrong Fitness in Pascoe Vale, Melbourne." />
+  <meta property="og:image" content="https://www.somastrongfitness.com.au/assets/hero1.jpg" />
+  <meta property="og:url" content="https://www.somastrongfitness.com.au/contact.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="theme-color" content="#fdfbf8" />
+  <link rel="icon" href="public/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="public/icons/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="public/style.css" />
+  <script src="script.js" defer></script>
 </head>
-  <body>
-       <header x-data="{ isOpen: false }" class="bg-white dark:bg-gray-800">
-      <nav class="px-6 py-4 shadow">
-          <div class="lg:items-center lg:justify-between lg:flex">
-              <div class="flex items-center justify-between">
-                  <a href="index.html"  >
-                      <img src="assets/somastronglogo.png" class="h-20" alt="somastronglogo">
-                  </a>
-                            <!-- Mobile menu button -->
-                  <div @click="isOpen = !isOpen" class="lg:hidden">
-                      <button
-                      type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="Toggle menu">
-                      <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                      <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-                      </svg>
-                      </button>
-                  </div>
-              </div>
+<body class="bg-cream-50 font-sans text-ink-900 antialiased">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-              <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-              <div :class="isOpen ? 'show' : 'hidden'" class="flex flex-col mt-2 -mx-2 lg:mt-0 lg:flex-row lg:block">
-                  <a href="index.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2">Home</a>
-                  <a href="about.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2">About</a>
-                  <a href="contact.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2">Contact</a>
-              </div>
-          </div>
+  <header data-header class="fixed inset-x-0 top-0 z-50">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
+      <a href="index.html" class="shrink-0" aria-label="SomaStrong Fitness home">
+        <img src="assets/somastronglogo.png" alt="SomaStrong Fitness" class="h-14 w-auto md:h-16" width="800" height="321" />
+      </a>
+
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
+        <a href="index.html" class="nav-link text-sm font-medium">Home</a>
+        <a href="about.html" class="nav-link text-sm font-medium">About</a>
+        <a href="contact.html" class="nav-link text-sm font-medium" aria-current="page">Contact</a>
+        <a href="contact.html" class="btn btn-primary text-sm">Book a session</a>
       </nav>
-    </header>
 
-    <section class="bg-white w-full max-w-2xl mt-6 px-6 py-4 mx-auto rounded-md shadow-md dark:bg-gray-800">
-        <h2 class="text-3xl font-semibold text-center text-gray-800 dark:text-white">Get in touch</h2>
-        <p class="mt-3 text-center text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      <button type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" class="flex h-11 w-11 items-center justify-center rounded-full text-ink-900 lg:hidden">
+        <span class="sr-only">Toggle menu</span>
+        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current" aria-hidden="true">
+          <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+        </svg>
+      </button>
+    </div>
 
-        <div class="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 md:grid-cols-3">
-            <a href="#" class="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-200 transform rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
-                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
-                </svg>
+    <div id="mobile-menu" data-nav-menu data-open="false" class="bg-cream-50 shadow-lg lg:hidden">
+      <div class="flex flex-col gap-1 border-t border-ink-900/5 px-6 pb-6 pt-2">
+        <a href="index.html" class="rounded-lg px-3 py-3 text-sm font-medium hover:bg-cream-200">Home</a>
+        <a href="about.html" class="rounded-lg px-3 py-3 text-sm font-medium hover:bg-cream-200">About</a>
+        <a href="contact.html" class="rounded-lg px-3 py-3 text-sm font-medium hover:bg-cream-200" aria-current="page">Contact</a>
+        <a href="contact.html" class="btn btn-primary mt-2 justify-center text-sm">Book a session</a>
+      </div>
+    </div>
+  </header>
 
-                <span class="mt-2">Graham Street<br>Pascoe Vale<br>Melbourne<br>Victoria<br> 3044</span>
-            </a>
+  <main id="main" class="pt-32">
+    <section class="mx-auto max-w-7xl px-6 pb-24 lg:px-8" aria-labelledby="contact-heading">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="eyebrow mx-auto justify-center">Get in touch</p>
+        <h1 id="contact-heading" class="mt-4 text-4xl font-semibold sm:text-5xl">Let's start your journey</h1>
+        <p class="mt-4 text-lg text-ink-700">Have a question, or ready to book a free consultation? Reach out below — I'll get back to you within a couple of days.</p>
+      </div>
 
-            <a href="#" class="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-200 transform rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
-                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
+      <!-- Contact cards -->
+      <ul role="list" class="mx-auto mt-14 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3">
+        <li>
+          <a href="https://maps.google.com/?q=Graham+Street+Pascoe+Vale+VIC+3044" target="_blank" rel="noopener noreferrer" class="card-surface flex h-full flex-col items-center gap-2 p-6 text-center transition hover:-translate-y-1">
+            <svg class="h-6 w-6 text-clay-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-sm text-ink-700">Graham Street<br />Pascoe Vale, VIC 3044</span>
+          </a>
+        </li>
+        <li>
+          <a href="tel:+61438863750" class="card-surface flex h-full flex-col items-center gap-2 p-6 text-center transition hover:-translate-y-1">
+            <svg class="h-6 w-6 text-clay-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+            <span class="text-sm text-ink-700">0438 863 750</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:somastrong29@gmail.com" class="card-surface flex h-full flex-col items-center gap-2 p-6 text-center transition hover:-translate-y-1">
+            <svg class="h-6 w-6 text-clay-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+            </svg>
+            <span class="text-sm text-ink-700">somastrong29@gmail.com</span>
+          </a>
+        </li>
+      </ul>
 
-                <span class="mt-2">0438 863 750</span>
-            </a>
+      <!-- Form -->
+      <div class="card-surface mx-auto mt-14 max-w-2xl p-8 sm:p-10">
+        <form
+          data-contact-form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="space-y-6"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+          </p>
 
-            <a href="#" class="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-200 transform rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
-                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
-
-                <span class="mt-2">somastrong29@gmail.com</span>
-            </a>
-        </div>
-        <form action="post" data-netlify="true" class="mt-6">
-              <div class="items-center -mx-2 md:flex">
-                <div class="w-full mx-2">
-                    <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Name</label>
-                    <input type="text" id="name" name="name" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text">
-                </div>
-                <div class="w-full mx-2 mt-4 md:mt-0">
-                    <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">E-mail</label>
-
-                    <input type="email" id="email" name="email" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="email">
-                </div>
+          <div class="grid gap-6 sm:grid-cols-2">
+            <div>
+              <label for="name" class="block text-sm font-medium text-ink-700">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                autocomplete="name"
+                class="mt-2 block w-full rounded-lg border border-ink-900/15 bg-cream-50 px-4 py-3 text-ink-900 placeholder:text-ink-300 focus:border-clay-600 focus:outline-none"
+                placeholder="Jane Smith"
+              />
             </div>
-            <div class="w-full mt-4">
-                <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Message</label>
-
-                <textarea id="message" name="message" class="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"></textarea>
+            <div>
+              <label for="email" class="block text-sm font-medium text-ink-700">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+                class="mt-2 block w-full rounded-lg border border-ink-900/15 bg-cream-50 px-4 py-3 text-ink-900 placeholder:text-ink-300 focus:border-clay-600 focus:outline-none"
+                placeholder="jane@example.com"
+              />
             </div>
+          </div>
 
-            <div class="flex justify-center mt-6">
-                <button type="submit" class="px-4 py-2 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Send Message</button>
-            </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium text-ink-700">Phone <span class="text-ink-300">(optional)</span></label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              autocomplete="tel"
+              class="mt-2 block w-full rounded-lg border border-ink-900/15 bg-cream-50 px-4 py-3 text-ink-900 placeholder:text-ink-300 focus:border-clay-600 focus:outline-none"
+              placeholder="04xx xxx xxx"
+            />
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-ink-700">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="5"
+              class="mt-2 block w-full rounded-lg border border-ink-900/15 bg-cream-50 px-4 py-3 text-ink-900 placeholder:text-ink-300 focus:border-clay-600 focus:outline-none"
+              placeholder="Tell me a bit about your goals…"
+            ></textarea>
+          </div>
+
+          <div
+            data-form-feedback
+            role="status"
+            tabindex="-1"
+            hidden
+            class="rounded-lg p-4 text-sm data-[state=success]:bg-emerald-50 data-[state=success]:text-emerald-800 data-[state=error]:bg-red-50 data-[state=error]:text-red-800"
+          ></div>
+
+          <button type="submit" data-form-submit class="btn btn-primary w-full sm:w-auto">Send message</button>
         </form>
+      </div>
     </section>
-      </body>
-      <footer class="bg-gray-200">
-        <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-          <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
-            <div class="px-5 py-2">
-              <a href="index.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2"> Home </a>
-            </div>
+  </main>
 
-            <div class="px-5 py-2">
-              <a href="about.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2"> About </a>
-            </div>
-
-            <div class="px-5 py-2">
-              <a href="contact.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2"> Contact </a>
-            </div>
-           </nav>
-
-          <p class="mt-8 text-center text-base text-gray-400">&copy; 2022 F-Web-Dev, Inc. All rights reserved.</p>
+  <footer class="bg-cream-50 text-ink-700">
+    <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div class="grid gap-10 sm:grid-cols-3">
+        <div>
+          <img src="assets/somastronglogo.png" alt="SomaStrong Fitness" class="h-10 w-auto" width="800" height="321" />
+          <p class="mt-4 max-w-xs text-sm leading-relaxed">Private personal training studio for women in Pascoe Vale, Melbourne.</p>
         </div>
-      </footer>
+
+        <nav aria-label="Footer">
+          <h3 class="text-sm font-semibold text-ink-900">Menu</h3>
+          <ul role="list" class="mt-4 space-y-2 text-sm">
+            <li><a class="hover:text-ink-900" href="index.html">Home</a></li>
+            <li><a class="hover:text-ink-900" href="about.html">About</a></li>
+            <li><a class="hover:text-ink-900" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h3 class="text-sm font-semibold text-ink-900">Get in touch</h3>
+          <ul role="list" class="mt-4 space-y-2 text-sm">
+            <li><a class="hover:text-ink-900" href="tel:+61438863750">0438 863 750</a></li>
+            <li><a class="hover:text-ink-900" href="mailto:somastrong29@gmail.com">somastrong29@gmail.com</a></li>
+            <li>Graham Street, Pascoe Vale, VIC 3044</li>
+            <li><a class="hover:text-ink-900" href="https://www.facebook.com/kathyg29" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="mt-12 border-t border-ink-900/10 pt-8 text-center text-xs text-ink-500">&copy; 2026 SomaStrong Fitness. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
 </html>

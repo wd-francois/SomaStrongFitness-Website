@@ -1,193 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/style.css">
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Kathy | SomaStrong Fitness</title>
+  <meta name="description" content="Meet Kathy, a certified personal trainer with 10+ years of experience. Circuit training, pre/postnatal strength training and habit-based nutrition coaching for women in Pascoe Vale, Melbourne." />
+  <link rel="canonical" href="https://www.somastrongfitness.com.au/about.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SomaStrong Fitness" />
+  <meta property="og:title" content="About Kathy | SomaStrong Fitness" />
+  <meta property="og:description" content="Certified personal trainer with 10+ years of experience helping women build strength, confidence and sustainable habits." />
+  <meta property="og:image" content="https://www.somastrongfitness.com.au/assets/Studio/11.jpg" />
+  <meta property="og:url" content="https://www.somastrongfitness.com.au/about.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="theme-color" content="#fdfbf8" />
+  <link rel="icon" href="public/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="public/icons/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="public/style.css" />
+  <script src="script.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kathy",
+    "jobTitle": "Certified Personal Trainer",
+    "worksFor": {
+      "@type": "ExerciseGym",
+      "name": "SomaStrong Fitness"
+    },
+    "sameAs": ["https://www.facebook.com/kathyg29"]
+  }
+  </script>
 </head>
-  <body class="mx-0 px-0">
-       <header x-data="{ isOpen: false }" class="bg-white dark:bg-gray-800">
-      <nav class="px-8 py-6 shadow">
-          <div class="lg:items-center lg:justify-between lg:flex">
-              <div class="flex items-center justify-between">
-                  <a href="index.html">
-                      <img src="assets/somastronglogo.png" href="index.html" class="h-20" alt="somastronglogo">
-                  </a>
-                            <!-- Mobile menu button -->
-                  <div @click="isOpen = !isOpen" class="lg:hidden">
-                      <button
-                      type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="Toggle menu">
-                      <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                      <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-                      </svg>
-                      </button>
-                  </div>
-              </div>
+<body class="bg-cream-50 font-sans text-ink-900 antialiased">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-              <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-              <div :class="isOpen ? 'show' : 'hidden'" class="flex flex-col mt-2 -mx-2 lg:mt-0 lg:flex-row lg:block">
-                  <a href="index.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2">Home</a>
-                  <a href="about.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2">About</a>
-                  <a href="contact.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2">Contact</a>
-              </div>
-          </div>
+  <header data-header class="fixed inset-x-0 top-0 z-50">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
+      <a href="index.html" class="shrink-0" aria-label="SomaStrong Fitness home">
+        <img src="assets/somastronglogo.png" alt="SomaStrong Fitness" class="h-14 w-auto md:h-16" width="800" height="321" />
+      </a>
+
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
+        <a href="index.html" class="nav-link text-sm font-medium">Home</a>
+        <a href="about.html" class="nav-link text-sm font-medium" aria-current="page">About</a>
+        <a href="contact.html" class="nav-link text-sm font-medium">Contact</a>
+        <a href="contact.html" class="btn btn-primary text-sm">Book a session</a>
       </nav>
-    </header>
-    <section class="bg-white dark:bg-gray-800">
-        <div class="container px-8 py-12 mx-auto max-w-6xl">
-            <div class="items-center lg:flex">
-                <div class="lg:w-1/2">
-                    <div class="mt-8 lg:mt-0 lg:w-1/2">
-                        <div class="flex items-center justify-center lg:justify-end">
-                            <div class="max-w-lg">
-                                <img class="object-cover object-center w-full h-64 rounded-md shadow" src="https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mt-8 mb-6">About me</h2>
-                    <p class="mt-6 mb-8 text-gray-500 dark:text-gray-400 lg:max-w-2xl leading-relaxed">
-                       
-Hi, I'm Kathy, a certified personal trainer with over ten years of experience running my own personal training business. Health and fitness have always been a passion of mine—but what truly drives me is helping women discover their own strength, both physically and mentally.
 
-Over the years, I've worked with women of all ages, backgrounds, and fitness levels. Whether it's lifting their first weight, building confidence in movement, or creating sustainable healthy habits, I'm deeply invested in every client's journey. There's nothing more rewarding than seeing my clients achieve goals they once thought were out of reach.
+      <button type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" class="flex h-11 w-11 items-center justify-center rounded-full text-ink-900 lg:hidden">
+        <span class="sr-only">Toggle menu</span>
+        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current" aria-hidden="true">
+          <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+        </svg>
+      </button>
+    </div>
 
-My approach is supportive, practical, and results-focused. I believe fitness should be empowering—not intimidating—and I've created a private home studio that reflects that: a welcoming space where you can show up as you are, and grow into your strongest, healthiest self.
+    <div id="mobile-menu" data-nav-menu data-open="false" class="bg-cream-50 shadow-lg lg:hidden">
+      <div class="flex flex-col gap-1 border-t border-ink-900/5 px-6 pb-6 pt-2">
+        <a href="index.html" class="rounded-lg px-3 py-3 text-sm font-medium hover:bg-cream-200">Home</a>
+        <a href="about.html" class="rounded-lg px-3 py-3 text-sm font-medium hover:bg-cream-200" aria-current="page">About</a>
+        <a href="contact.html" class="rounded-lg px-3 py-3 text-sm font-medium hover:bg-cream-200">Contact</a>
+        <a href="contact.html" class="btn btn-primary mt-2 justify-center text-sm">Book a session</a>
+      </div>
+    </div>
+  </header>
 
-Let's build something strong—together.
-
-Circuit Training for All Fitness Levels
-
-Strength • Cardio • Conditioning
-
-Looking for a fun, fast-paced way to build strength, boost endurance, and improve overall fitness? Join our small group circuit training sessions designed for women of all fitness levels.
-
-These dynamic sessions combine strength, cardio, and conditioning exercises in a supportive, energetic environment. Whether you're just starting out or looking to level up your training, each workout can be modified to suit your individual ability—so everyone gets a great session, no matter where they're at.
-
-What to Expect:
-
-🔥 Full-body workouts that build muscle and burn calories
-⏱️ Timed stations for strength, cardio, and core conditioning
-👯 Small group setting (max 4–6 participants) for individual attention
-📈 Progress-focused training in a fun, motivating space
-
-Circuit training is a great way to stay consistent, challenge your body in new ways, and enjoy the energy of training alongside others.
-
-Strength Training for Pre & Postnatal Women
-
-At [Your Studio Name], we offer safe, effective, and empowering strength training programs tailored specifically for women during and after pregnancy.
-
-Our certified trainers understand the unique physiological changes that occur during this transformative time and are here to support your body, mind, and goals—whether you're preparing for childbirth or rebuilding your strength postpartum.
-
-Why Strength Training Matters During & After Pregnancy
-
-For Expecting Mothers (Prenatal):
-• 🌿 Improves posture & reduces back pain
-Pregnancy can shift your center of gravity and strain your lower back. Strength training helps support your spine and posture.
-• 💪 Builds stamina for labor & delivery
-A stronger body can lead to a smoother labor experience and quicker recovery.
-• 🧠 Boosts energy & mood
-Exercise helps reduce stress, anxiety, and fatigue, supporting mental wellbeing.
-• 🩸 Supports healthy weight gain and circulation
-Staying active reduces the risk of gestational diabetes and swelling.
-
-For New Mothers (Postnatal):
-• 🔄 Promotes faster recovery
-Gentle strength work helps restore core function and pelvic floor strength.
-• 🧍‍♀️ Improves posture and reduces muscle imbalances
-Carrying and feeding your baby often creates tension—training corrects and prevents discomfort.
-• 💥 Supports mental health & confidence
-Exercise releases endorphins, helps manage postnatal depression, and restores a sense of control and empowerment.
-• 🤱 Boosts energy for motherhood
-Strength training improves functional fitness so you can meet the demands of motherhood with more ease.
-
-Safe & Supportive Environment for Women
-
-We know every pregnancy and postpartum journey is different. That's why our programs are:
-• 🧑‍⚕️ Designed in consultation with women's health professionals
-• 📋 Tailored to your trimester or postpartum stage
-• 🫶 Offered in a private, non-intimidating setting exclusively for women
-
-Whether you're new to training or experienced, our goal is to help you feel strong, confident, and supported throughout your motherhood journey.
-
-Nutrition Coaching for Women
-
-Real habits. Real results. No diets.
-
-At [Your Studio Name], we believe that lasting change doesn't come from restriction—it comes from building sustainable, healthy habits that support your lifestyle, your goals, and your wellbeing.
-
-Our nutrition coaching is designed specifically for women who are ready to feel better in their bodies, improve their relationship with food, and finally ditch the all-or-nothing mindset.
-
-What Makes Our Approach Different?
-
-🌀 No meal plans. No calorie obsession.
-We don't hand you a strict meal plan or tell you to count every bite. Instead, we work with you to understand your unique needs and build habits around real food, balance, and flexibility.
-
-💬 1:1 support & accountability
-You'll get personalized guidance, check-ins, and coaching that meet you where you are—and evolve as you do.
-
-🌿 Habit-based method
-We focus on simple, powerful shifts like:
-• Eating more mindfully
-• Balancing meals with protein, fiber, and healthy fats
-• Staying hydrated
-• Listening to hunger and fullness cues
-• Planning meals without overwhelm
-
-⏳ Sustainable for life
-This isn't a 30-day challenge. It's about creating a way of eating that supports your energy, hormones, and lifestyle—for the long run.
-
-⸻
-
-Is This Right for You?
-
-Our habit-based nutrition coaching is ideal for you if:
-• You're tired of yo-yo dieting and want real change
-• You want to feel in control around food
-• You're looking to support your fitness goals without obsession
-• You're navigating life stages like pregnancy, postpartum, perimenopause, or menopause
-• You value a compassionate, supportive approach to wellness
-
-⸻
-
-Your Body. Your Goals. Your Pace.
-
-Whether your goal is to feel stronger, have more energy, support your workouts, or simply develop a healthier relationship with food, we'll help you get there—one habit at a time.
-
-📞 Ready to start? Book a free consultation and take the first step toward feeling your best—without the pressure of perfection.
-                    </p>
-                    <div class="flex items-center mt-8 -mx-2">
-                        <a href="https://www.facebook.com/kathyg29" class="mx-2" href="#" aria-label="Facebook">
-                            <svg class="w-5 h-5 text-gray-700 fill-current dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M426.8 64H85.2C73.5 64 64 73.5 64 85.2v341.6c0 11.7 9.5 21.2 21.2 21.2H256V296h-45.9v-56H256v-41.4c0-49.6 34.4-76.6 78.7-76.6 21.2 0 44 1.6 49.3 2.3v51.8h-35.3c-24.1 0-28.7 11.4-28.7 28.2V240h57.4l-7.5 56H320v152h106.8c11.7 0 21.2-9.5 21.2-21.2V85.2c0-11.7-9.5-21.2-21.2-21.2z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-             
-            </div>
+  <main id="main" class="pt-32">
+    <!-- Intro -->
+    <section class="mx-auto max-w-7xl px-6 pb-20 lg:px-8" aria-labelledby="about-heading">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div class="reveal">
+          <p class="eyebrow">About me</p>
+          <h1 id="about-heading" class="mt-4 text-4xl font-semibold sm:text-5xl">Hi, I'm Kathy.</h1>
+          <div class="mt-6 space-y-5 text-lg leading-relaxed text-ink-700">
+            <p>
+              I'm a certified personal trainer with over ten years of experience running my own personal training business. Health and fitness have always been a passion of mine — but what truly drives me is helping women discover their own strength, both physically and mentally.
+            </p>
+            <p>
+              Over the years, I've worked with women of all ages, backgrounds, and fitness levels. Whether it's lifting their first weight, building confidence in movement, or creating sustainable healthy habits, I'm deeply invested in every client's journey. There's nothing more rewarding than seeing my clients achieve goals they once thought were out of reach.
+            </p>
+            <p>
+              My approach is supportive, practical, and results-focused. I believe fitness should be empowering — not intimidating — and I've created a private home studio that reflects that: a welcoming space where you can show up as you are, and grow into your strongest, healthiest self.
+            </p>
+            <p class="font-display text-xl font-semibold text-ink-900">Let's build something strong — together.</p>
+          </div>
+          <a href="https://www.facebook.com/kathyg29" class="mt-8 inline-flex items-center gap-2 text-sm font-medium text-ink-700 hover:text-clay-600" target="_blank" rel="noopener noreferrer">
+            <svg class="h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true">
+              <path d="M426.8 64H85.2C73.5 64 64 73.5 64 85.2v341.6c0 11.7 9.5 21.2 21.2 21.2H256V296h-45.9v-56H256v-41.4c0-49.6 34.4-76.6 78.7-76.6 21.2 0 44 1.6 49.3 2.3v51.8h-35.3c-24.1 0-28.7 11.4-28.7 28.2V240h57.4l-7.5 56H320v152h106.8c11.7 0 21.2-9.5 21.2-21.2V85.2c0-11.7-9.5-21.2-21.2-21.2z" />
+            </svg>
+            Follow on Facebook
+          </a>
         </div>
+
+        <div class="reveal">
+          <img
+            src="assets/Studio/15.jpg"
+            srcset="assets/Studio/15.webp"
+            alt="SomaStrong home studio, fully equipped for strength training"
+            class="aspect-4/5 w-full rounded-2xl object-cover shadow-(--shadow-soft)"
+            loading="lazy"
+            decoding="async"
+            width="1200"
+            height="1500"
+          />
+        </div>
+      </div>
     </section>
-      </body>
-      <footer class="bg-gray-200 mt-16">
-        <div class="max-w-7xl mx-auto py-12 px-8 overflow-hidden sm:px-8 lg:px-12">
-          <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
-            <div class="px-5 py-2">
-              <a href="index.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2"> Home </a>
-            </div>
 
-            <div class="px-5 py-2">
-              <a href="about.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2"> About </a>
-            </div>
+    <!-- Circuit training -->
+    <section class="border-t border-ink-900/5 bg-cream-100 py-20" aria-labelledby="circuit-heading">
+      <div class="mx-auto max-w-4xl px-6 lg:px-8">
+        <p class="eyebrow">Strength · Cardio · Conditioning</p>
+        <h2 id="circuit-heading" class="mt-4 text-3xl font-semibold sm:text-4xl">Circuit training for all fitness levels</h2>
+        <p class="mt-6 text-lg leading-relaxed text-ink-700">
+          Looking for a fun, fast-paced way to build strength, boost endurance, and improve overall fitness? Join small-group circuit training sessions designed for women of all fitness levels — dynamic sessions combining strength, cardio, and conditioning exercises in a supportive, energetic environment. Whether you're just starting out or levelling up, every workout can be modified to suit your individual ability.
+        </p>
 
-            <div class="px-5 py-2">
-              <a href="contact.html" class="px-2 py-2 text-sm text-gray-800 rounded-md dark:text-gray-200 hover:bg-gray-900 hover:text-gray-100 hover:font-medium lg:mx-2"> Contact </a>
-            </div>
-           </nav>
+        <h3 class="mt-10 text-lg font-semibold">What to expect</h3>
+        <ul role="list" class="mt-4 grid gap-4 sm:grid-cols-2">
+          <li class="card-surface flex items-start gap-3 p-5">
+            <span class="text-xl" aria-hidden="true">🔥</span>
+            <span class="text-sm leading-relaxed text-ink-700">Full-body workouts that build muscle and burn calories</span>
+          </li>
+          <li class="card-surface flex items-start gap-3 p-5">
+            <span class="text-xl" aria-hidden="true">⏱️</span>
+            <span class="text-sm leading-relaxed text-ink-700">Timed stations for strength, cardio, and core conditioning</span>
+          </li>
+          <li class="card-surface flex items-start gap-3 p-5">
+            <span class="text-xl" aria-hidden="true">👯</span>
+            <span class="text-sm leading-relaxed text-ink-700">Small group setting (max 4–6 participants) for individual attention</span>
+          </li>
+          <li class="card-surface flex items-start gap-3 p-5">
+            <span class="text-xl" aria-hidden="true">📈</span>
+            <span class="text-sm leading-relaxed text-ink-700">Progress-focused training in a fun, motivating space</span>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-          <p class="mt-8 text-center text-base text-gray-400">&copy; 2022 F-Web-Dev, Inc. All rights reserved.</p>
+    <!-- Pre & postnatal -->
+    <section class="py-20" aria-labelledby="prepost-heading">
+      <div class="mx-auto max-w-4xl px-6 lg:px-8">
+        <p class="eyebrow">For expecting &amp; new mothers</p>
+        <h2 id="prepost-heading" class="mt-4 text-3xl font-semibold sm:text-4xl">Strength training for pre &amp; postnatal women</h2>
+        <p class="mt-6 text-lg leading-relaxed text-ink-700">
+          Safe, effective, and empowering strength training programs tailored specifically for women during and after pregnancy. I understand the unique physiological changes that occur during this transformative time and I'm here to support your body, mind, and goals — whether you're preparing for childbirth or rebuilding your strength postpartum.
+        </p>
+
+        <div class="mt-12 grid gap-10 sm:grid-cols-2">
+          <div>
+            <h3 class="text-lg font-semibold">For expecting mothers (prenatal)</h3>
+            <ul role="list" class="mt-4 space-y-4 text-sm leading-relaxed text-ink-700">
+              <li><strong class="text-ink-900">🌿 Improves posture &amp; reduces back pain</strong> — pregnancy can shift your centre of gravity and strain your lower back; strength training helps support your spine and posture.</li>
+              <li><strong class="text-ink-900">💪 Builds stamina for labour &amp; delivery</strong> — a stronger body can lead to a smoother labour experience and quicker recovery.</li>
+              <li><strong class="text-ink-900">🧠 Boosts energy &amp; mood</strong> — exercise helps reduce stress, anxiety, and fatigue, supporting mental wellbeing.</li>
+              <li><strong class="text-ink-900">🩸 Supports healthy weight gain and circulation</strong> — staying active reduces the risk of gestational diabetes and swelling.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">For new mothers (postnatal)</h3>
+            <ul role="list" class="mt-4 space-y-4 text-sm leading-relaxed text-ink-700">
+              <li><strong class="text-ink-900">🔄 Promotes faster recovery</strong> — gentle strength work helps restore core function and pelvic floor strength.</li>
+              <li><strong class="text-ink-900">🧍‍♀️ Improves posture and reduces muscle imbalances</strong> — carrying and feeding your baby often creates tension; training corrects and prevents discomfort.</li>
+              <li><strong class="text-ink-900">💥 Supports mental health &amp; confidence</strong> — exercise releases endorphins, helps manage postnatal depression, and restores a sense of control and empowerment.</li>
+              <li><strong class="text-ink-900">🤱 Boosts energy for motherhood</strong> — strength training improves functional fitness so you can meet the demands of motherhood with more ease.</li>
+            </ul>
+          </div>
         </div>
-      </footer>
+
+        <div class="card-surface mt-12 p-8">
+          <h3 class="text-lg font-semibold">Safe &amp; supportive environment for women</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-700">Every pregnancy and postpartum journey is different, so programs are:</p>
+          <ul role="list" class="mt-4 space-y-2 text-sm leading-relaxed text-ink-700">
+            <li>🧑‍⚕️ Designed in consultation with women's health professionals</li>
+            <li>📋 Tailored to your trimester or postpartum stage</li>
+            <li>🫶 Offered in a private, non-intimidating setting exclusively for women</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nutrition coaching -->
+    <section class="border-t border-ink-900/5 bg-cream-100 py-20" aria-labelledby="nutrition-heading">
+      <div class="mx-auto max-w-4xl px-6 lg:px-8">
+        <p class="eyebrow">Real habits. Real results. No diets.</p>
+        <h2 id="nutrition-heading" class="mt-4 text-3xl font-semibold sm:text-4xl">Nutrition coaching for women</h2>
+        <p class="mt-6 text-lg leading-relaxed text-ink-700">
+          At SomaStrong Fitness, lasting change doesn't come from restriction — it comes from building sustainable, healthy habits that support your lifestyle, your goals, and your wellbeing. This coaching is designed specifically for women who are ready to feel better in their bodies, improve their relationship with food, and finally ditch the all-or-nothing mindset.
+        </p>
+
+        <h3 class="mt-10 text-lg font-semibold">What makes this approach different?</h3>
+        <ul role="list" class="mt-4 space-y-5 text-sm leading-relaxed text-ink-700">
+          <li>
+            <strong class="text-ink-900">🌀 No meal plans. No calorie obsession.</strong>
+            <p class="mt-1">No strict meal plans, no counting every bite — instead, we work together to understand your unique needs and build habits around real food, balance, and flexibility.</p>
+          </li>
+          <li>
+            <strong class="text-ink-900">💬 1:1 support &amp; accountability</strong>
+            <p class="mt-1">Personalised guidance, check-ins, and coaching that meet you where you are — and evolve as you do.</p>
+          </li>
+          <li>
+            <strong class="text-ink-900">🌿 Habit-based method</strong>
+            <p class="mt-1">Simple, powerful shifts: eating more mindfully, balancing meals with protein, fibre, and healthy fats, staying hydrated, listening to hunger and fullness cues, and planning meals without overwhelm.</p>
+          </li>
+          <li>
+            <strong class="text-ink-900">⏳ Sustainable for life</strong>
+            <p class="mt-1">Not a 30-day challenge — a way of eating that supports your energy, hormones, and lifestyle for the long run.</p>
+          </li>
+        </ul>
+
+        <h3 class="mt-10 text-lg font-semibold">Is this right for you?</h3>
+        <p class="mt-3 text-sm text-ink-700">This habit-based nutrition coaching is ideal if:</p>
+        <ul role="list" class="mt-4 grid gap-3 sm:grid-cols-2">
+          <li class="card-surface p-4 text-sm text-ink-700">You're tired of yo-yo dieting and want real change</li>
+          <li class="card-surface p-4 text-sm text-ink-700">You want to feel in control around food</li>
+          <li class="card-surface p-4 text-sm text-ink-700">You're supporting your fitness goals without obsession</li>
+          <li class="card-surface p-4 text-sm text-ink-700">You're navigating pregnancy, postpartum, perimenopause, or menopause</li>
+          <li class="card-surface p-4 text-sm text-ink-700 sm:col-span-2">You value a compassionate, supportive approach to wellness</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-clay-600 py-20 text-cream-50" aria-labelledby="about-cta-heading">
+      <div class="mx-auto max-w-3xl px-6 text-center lg:px-8">
+        <h2 id="about-cta-heading" class="text-3xl font-semibold sm:text-4xl">Your body. Your goals. Your pace.</h2>
+        <p class="mx-auto mt-4 max-w-xl text-cream-100">
+          Ready to start? Book a free consultation and take the first step toward feeling your best — without the pressure of perfection.
+        </p>
+        <a href="contact.html" class="btn mt-8 bg-cream-50 text-ink-900 hover:bg-white">Book a free consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-cream-50 text-ink-700">
+    <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div class="grid gap-10 sm:grid-cols-3">
+        <div>
+          <img src="assets/somastronglogo.png" alt="SomaStrong Fitness" class="h-10 w-auto" width="800" height="321" />
+          <p class="mt-4 max-w-xs text-sm leading-relaxed">Private personal training studio for women in Pascoe Vale, Melbourne.</p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h3 class="text-sm font-semibold text-ink-900">Menu</h3>
+          <ul role="list" class="mt-4 space-y-2 text-sm">
+            <li><a class="hover:text-ink-900" href="index.html">Home</a></li>
+            <li><a class="hover:text-ink-900" href="about.html">About</a></li>
+            <li><a class="hover:text-ink-900" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h3 class="text-sm font-semibold text-ink-900">Get in touch</h3>
+          <ul role="list" class="mt-4 space-y-2 text-sm">
+            <li><a class="hover:text-ink-900" href="tel:+61438863750">0438 863 750</a></li>
+            <li><a class="hover:text-ink-900" href="mailto:somastrong29@gmail.com">somastrong29@gmail.com</a></li>
+            <li>Graham Street, Pascoe Vale, VIC 3044</li>
+            <li><a class="hover:text-ink-900" href="https://www.facebook.com/kathyg29" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="mt-12 border-t border-ink-900/10 pt-8 text-center text-xs text-ink-500">&copy; 2026 SomaStrong Fitness. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
 </html>

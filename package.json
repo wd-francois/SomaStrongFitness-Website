@@ -1,16 +1,19 @@
 {
   "name": "somastrongfitness-website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "SomaStrong Fitness — personal training studio website",
+  "private": true,
   "scripts": {
-    "build-css": "npx tailwindcss -i ./src/styles.css -o ./public/style.css --watch"
-     },
+    "dev": "tailwindcss -i ./src/styles.css -o ./public/style.css --watch",
+    "build": "tailwindcss -i ./src/styles.css -o ./public/style.css --minify",
+    "optimize-images": "node scripts/optimize-images.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "alpinejs": "^3.9.1",
-    "esbuild": "^0.14.25"
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "sharp": "^0.35.3",
+    "tailwindcss": "^4.3.3"
   }
 }

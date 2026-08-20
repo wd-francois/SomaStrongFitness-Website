@@ -1,3 +1,248 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@source "../*.html";
+
+/* ---------------------------------------------------------------------
+   Design tokens
+   Soft, confident blush neutrals with a dusty-rose accent for CTAs and
+   emphasis — feminine and warm, still strength-led, not "gym neon".
+   --------------------------------------------------------------------- */
+@theme {
+  --font-display: "Bricolage Grotesque", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-ink-950: #1a1214;
+  --color-ink-900: #241a1d;
+  --color-ink-800: #362528;
+  --color-ink-700: #55393e;
+  --color-ink-500: #82666b;
+  --color-ink-300: #b89ea0;
+
+  --color-cream-50: #fdf8f7;
+  --color-cream-100: #faf0ed;
+  --color-cream-200: #f4e2dc;
+  --color-cream-300: #e0c4ba;
+  --color-cream-500: #b99c94;
+
+  --color-clay-500: #c2617f;
+  --color-clay-600: #a8455f;
+  --color-clay-700: #86344b;
+
+  --shadow-soft: 0 20px 45px -20px rgb(20 17 15 / 0.35);
+  --shadow-card: 0 10px 30px -12px rgb(20 17 15 / 0.18);
+
+  --animate-fade-up: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Base
+   --------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink-900);
+    background-color: var(--color-cream-50);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  /* Consistent, visible focus ring for keyboard users on every interactive element. */
+  :focus-visible {
+    outline: 2px solid var(--color-clay-600);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-clay-500);
+    color: var(--color-cream-50);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Components
+   --------------------------------------------------------------------- */
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-inline: 1.75rem;
+    padding-block: 0.9rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    letter-spacing: 0.01em;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  .btn:active {
+    transform: translateY(0);
+  }
+
+  .btn-primary {
+    background-color: var(--color-clay-600);
+    color: var(--color-cream-50);
+    box-shadow: var(--shadow-card);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-clay-700);
+  }
+
+  .btn-ghost {
+    background-color: transparent;
+    color: inherit;
+    border: 1.5px solid currentColor;
+  }
+  .btn-ghost:hover {
+    background-color: var(--color-cream-50);
+    color: var(--color-ink-900);
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-clay-600);
+  }
+  .eyebrow::before {
+    content: "";
+    width: 1.5rem;
+    height: 2px;
+    background-color: currentColor;
+  }
+
+  .nav-link {
+    position: relative;
+    padding-block: 0.4rem;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .nav-link:hover::after,
+  .nav-link[aria-current="page"]::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* Scroll-reveal: elements start hidden only when JS is active (progressive enhancement). */
+  .js .reveal {
+    opacity: 0;
+  }
+  .js .reveal.is-visible {
+    animation: var(--animate-fade-up);
+  }
+
+  .card-surface {
+    background-color: white;
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow-card);
+  }
+
+  [data-header] {
+    background-color: var(--color-cream-50);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-ink-900) 6%, transparent);
+    transition: box-shadow 0.3s ease;
+  }
+  [data-header].is-scrolled {
+    box-shadow: 0 12px 30px -20px rgb(20 17 15 / 0.25);
+  }
+
+  [data-nav-menu] {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  [data-nav-menu] > * {
+    overflow: hidden;
+  }
+  [data-nav-menu][data-open="true"] {
+    grid-template-rows: 1fr;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -3rem;
+    left: 1rem;
+    z-index: 100;
+    background-color: var(--color-ink-950);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus {
+    top: 1rem;
+  }
+
+  /* Gallery: native scroll-snap carousel, no JS required for core function. */
+  .gallery-track {
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .gallery-track::-webkit-scrollbar {
+    display: none;
+  }
+  .gallery-track > * {
+    scroll-snap-align: center;
+  }
+}
