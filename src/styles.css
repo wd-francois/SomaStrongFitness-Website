@@ -199,7 +199,7 @@
   }
 
   [data-header] {
-    background-color: var(--color-cream-50);
+    background-color: white;
     border-bottom: 1px solid color-mix(in srgb, var(--color-ink-900) 6%, transparent);
     transition: box-shadow 0.3s ease;
   }
